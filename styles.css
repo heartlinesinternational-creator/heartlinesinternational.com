@@ -108,11 +108,16 @@ footer .legal{border-top:1px solid rgba(250,242,220,.2);padding-top:16px;opacity
 .timeline li::before{content:"";position:absolute;left:-9px;top:.35em;width:15px;height:15px;border-radius:50%;background:var(--navy)}
 .timeline li.next::before{background:#fff;border:3px solid var(--dpink);width:9px;height:9px}
 .timeline .when{font-family:"Poppins",sans-serif;font-weight:700;color:var(--navy)}
+.timeline li.now::before{background:var(--dpink);box-shadow:0 0 0 4px var(--pink)}
+.timeline .phase{padding-left:22px;display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-top:6px}
+.timeline .phase::before{display:none}
 @media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:2px}}
 .downloads{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-top:26px}
 .dl{display:block;text-decoration:none;background:#fff;border:1px solid #eadfc8;border-radius:14px;padding:10px;font-weight:600;font-size:.9rem;text-align:center}
 .dl img{border-radius:8px;margin-bottom:8px;aspect-ratio:3/4;object-fit:cover;object-position:top;width:100%}
-.dl:hover{border-color:var(--dpink)}
+.dl{transition:transform .2s,box-shadow .2s,border-color .2s}
+.dl:hover{border-color:var(--dpink);transform:translateY(-4px) rotate(-1deg);box-shadow:0 14px 30px rgba(52,45,71,.14)}
+@media (prefers-reduced-motion:reduce){.flyer,.dl{transition:none;transform:none}.flyer:hover,.dl:hover{transform:none}}
 .flyer img{width:100%;height:auto}
 .feature .split{grid-template-columns:1.2fr .8fr}
 @media (max-width:820px){.feature .split{grid-template-columns:1fr}.flyer{max-width:300px}}
