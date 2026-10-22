@@ -1,4 +1,4 @@
-:root{--cream:#F8F1DE;--navy:#2D2344;--pink:#F1B5BC;--dpink:#E88C96;--ink:#2D2344;--muted:#5d5674;--white:#fff;--max:1080px}
+:root{--cream:#FAF2DC;--navy:#342D47;--pink:#F6C3C9;--dpink:#F199A4;--ink:#342D47;--muted:#5d5674;--white:#fff;--max:1080px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px}
@@ -10,7 +10,8 @@ img{max-width:100%;display:block}
 header{background:var(--cream);border-bottom:2px solid var(--pink);position:sticky;top:0;z-index:10}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;flex-wrap:wrap}
 .brand{font-weight:700;font-size:1.15rem;text-decoration:none;display:flex;align-items:center;gap:10px}
-.brand .heart{width:28px;height:28px;border-radius:50%;background:var(--dpink);display:grid;place-items:center;color:#fff;font-size:15px}
+.brand img{height:40px;width:auto}
+@media (max-width:420px){.brand span{display:none}}
 .nav ul{list-style:none;display:flex;gap:6px;flex-wrap:wrap}
 .nav a.link{text-decoration:none;padding:8px 12px;border-radius:999px;font-weight:500;font-size:.95rem}
 .nav a.link:hover{background:#fff}
