@@ -22,10 +22,11 @@ Read this before every change. It is the only context you have about this organi
 
 ## Style
 - Plain HTML and CSS only (no frameworks or build step). Every page shares the same header, Donate button, and footer.
-- Colors: cream #FAF2DC, navy #342D47, pink #F199A4, light pink #F6C3C9, white. Headings Poppins, body Inter. Logo at images/logo.png.
+- Colors: cream #FAF2DC, navy #342D47, pink #F199A4, light pink #F6C3C9, white. Headings Poppins, body Inter. Logo at images/logo.png. Chipotle flyers and guides in images/chipotle/, team photos in images/team/ (4:5 portrait, about 640x800 JPG).
 - Warm, simple, human. Avoid generic AI-sounding copy, buzzwords, and "futuristic" effects. Large numbers and short sentences make information stand out.
 - Mobile-friendly on every page. Check a 390px-wide phone layout.
 
 ## Placeholders still open
-- Donation link (`#DONATION-LINK`), Instagram link and handle (`#INSTAGRAM-LINK`, `@[instagram handle]`), founder photos.
-- Chipotle fundraiser confirmed (Nov 8, 2026, 4–8 PM, 1110 Blossom Hill Rd Ste 30; 25% of supporters' sales; online pickup code RCTR9LP). Remove the home-page banner and the get-involved section after Nov 8. Don't alter Chipotle's official flyer if it's ever added.
+- Donation link (`#DONATION-LINK`, waiting on Zeffy). Photos still needed: Allison Kim (founder card) and Joshua Kim (board row); Hyungjun Ham intentionally uses images/team/profile-placeholder.svg.
+- Instagram: https://www.instagram.com/heartlinesinternational/ (@heartlinesinternational).
+- Chipotle fundraiser confirmed (Nov 8, 2026, 4–8 PM, 1110 Blossom Hill Rd Ste 30; 25% of supporters' sales; online pickup code RCTR9LP). Remove the home-page Chipotle feature section and the get-involved Chipotle section after Nov 8 (keep the files in images/chipotle/ until the check arrives). Don't alter Chipotle's official flyer if it's ever added.
