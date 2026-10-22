@@ -16,6 +16,7 @@ Read this before every change. It is the only context you have about this organi
 - Never add bank details, signatures, a home or mailing address, phone numbers, or anyone's personal information.
 - Health facts: use only the statistics already cited in the Sources list on about.html (WHO, World Bank/WHO GHO, Cochrane, Bulletin of the WHO). Any new statistic needs a WHO, government, or peer-reviewed source, added to that list with a numbered link. Never give medical advice.
 - Don't invent facts, quotes, testimonials, numbers, partners, or results. If something is missing, leave a clearly marked [PLACEHOLDER].
+- Dates and history: never estimate a date. Every date on the About timeline is evidence-backed (Feb 2026 trip · Apr 2026 first outreach emails · May 2026 first call with the clinic · May–Aug 2026 drafting · Aug 19, 2026 incorporated · Aug–Sep 2026 clinic review · Oct 2026 IRS, bank, website). Ask the founders rather than guessing.
 - Donations: links to an outside donation page only. Never build a payment form.
 - Never mention the Eagle Scout project on this site.
 - Keep `robots.txt`, `sitemap.xml` and the JSON-LD block in each page's head (they help Google show the organization and its founders). Add any new page to `sitemap.xml`.
@@ -27,6 +28,6 @@ Read this before every change. It is the only context you have about this organi
 - Mobile-friendly on every page. Check a 390px-wide phone layout.
 
 ## Placeholders still open
-- Donation link (`#DONATION-LINK`, waiting on Zeffy). Photos still needed: Allison Kim (founder card) and Joshua Kim (board row); Hyungjun Ham intentionally uses images/team/profile-placeholder.svg.
+- Donation link is live: https://www.zeffy.com/en-US/donation-form/support-heartlines-international (every Donate button points there, opening in a new tab). Photos still needed: Allison Kim (founder card) and Joshua Kim (board row); Hyungjun Ham intentionally uses images/team/profile-placeholder.svg.
 - Instagram: https://www.instagram.com/heartlinesinternational/ (@heartlinesinternational).
 - Chipotle fundraiser confirmed (Nov 8, 2026, 4–8 PM, 1110 Blossom Hill Rd Ste 30; 25% of supporters' sales; online pickup code RCTR9LP). Remove the home-page Chipotle feature section and the get-involved Chipotle section after Nov 8 (keep the files in images/chipotle/ until the check arrives). Don't alter Chipotle's official flyer if it's ever added.
