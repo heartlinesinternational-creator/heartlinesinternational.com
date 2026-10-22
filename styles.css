@@ -51,3 +51,36 @@ footer{background:var(--navy);color:var(--cream);padding:40px 0;font-size:.9rem}
 footer a{color:var(--pink)}
 footer .legal{opacity:.85;margin-top:10px}
 @media (max-width:640px){.hero{padding:48px 0 40px}section{padding:44px 0}.mission{padding:26px;font-size:1.05rem}}
+
+/* ---- v3 additions: same palette, clearer hierarchy ---- */
+.nav-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.btn.sm{padding:8px 16px;font-size:.92rem}
+.statband{background:var(--navy);color:var(--cream);padding:44px 0}
+.statband .grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.stat .n{font-family:"Poppins",sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3rem);color:var(--dpink);line-height:1}
+.stat p{margin-top:8px;color:var(--cream);opacity:.92}
+.need .card{border-top:5px solid var(--dpink)}
+.need .big{font-family:"Poppins",sans-serif;font-weight:700;font-size:2.4rem;color:var(--navy);line-height:1;margin-bottom:10px}
+.ref{font-size:.75em;vertical-align:super;line-height:0;margin-left:2px;text-decoration:none;color:var(--dpink);font-weight:600}
+.ref:hover{text-decoration:underline}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+@media (max-width:820px){.split{grid-template-columns:1fr}}
+.quoteblock{background:#fff;border-radius:22px;padding:30px;border:1px solid #eadfc8}
+.ways .card h3{display:flex;align-items:center;gap:10px}
+.ways .card .tag{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--pink);color:var(--navy);padding:3px 9px;border-radius:999px}
+.ways .card .btn{margin-top:14px}
+.sources ol{padding-left:22px;display:grid;gap:10px;font-size:.92rem;color:var(--muted)}
+.sources a{word-break:break-word}
+.ctaband{background:var(--dpink);padding:48px 0;text-align:left}
+.ctaband h2{color:var(--navy);margin-bottom:10px}
+.ctaband p{color:var(--navy);margin-bottom:22px;max-width:56ch}
+.ctaband .btn.primary{border-color:var(--navy)}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:28px;margin-bottom:26px}
+@media (max-width:820px){footer .cols{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){footer .cols{grid-template-columns:1fr}}
+footer h4{font-family:"Poppins",sans-serif;color:var(--pink);font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+footer ul{list-style:none;display:grid;gap:6px}
+footer .flogo{height:44px;width:auto;margin-bottom:12px;background:var(--cream);border-radius:10px;padding:4px 8px}
+footer .legal{border-top:1px solid rgba(250,242,220,.2);padding-top:16px;opacity:.85}
+.contactline{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+@media (max-width:640px){.nav{padding:8px 20px}.nav-right{width:100%;justify-content:space-between;flex-wrap:nowrap}.nav ul{gap:2px}.nav a.link{padding:7px 9px;font-size:.88rem}.btn.sm{padding:7px 13px;font-size:.86rem}}
