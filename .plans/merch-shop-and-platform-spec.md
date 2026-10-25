@@ -176,7 +176,7 @@ If a founder deliberately removes every product, the build keeps showing the sna
   "Every purchase helps fund health kits for mothers at a partner maternity clinic in the Philippines."
   No numbers, no "100% of", no "tax-deductible".
 - **Grid** sized for 4–8 items: 2 columns at 390px, 3 at tablet, 4 at desktop; also works from 1 to ~12 items. No filters at this size.
-- **Card**: product image (square, `loading="lazy"`, `width`/`height` set to avoid layout shift, alt text = product name), name (Poppins), price large and plain (e.g. `$25`), and a button "Choose size & buy" → `productUrl`, `target="_blank" rel="noopener"`. This matches the Donate button.
+- **Card**: product image (square, `loading="lazy"`, `width`/`height` set to avoid layout shift, alt text = product name), name (Alegreya, the heading face), price large and plain (e.g. `$25`), and a button "Choose size & buy" → `productUrl`, `target="_blank" rel="noopener"`. This matches the Donate button.
 - **Sold out**: card stays visible, button replaced by a muted "Sold out" label.
 - Below the grid, short plain lines:
   - "Checkout is handled by Fourthwall. Ships within the US."
