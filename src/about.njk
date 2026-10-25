@@ -42,8 +42,8 @@ title: About · Heartlines International
 <div class="phase-col current">
 <h3 class="phase-h">Where we are now</h3>
 <ol>
-<li class="now"><b>Now</b> Preparing for our first event and our first cycle of kits.</li>
-<li class="next"><b>Nov 8, 2026</b> First fundraiser, at Chipotle in San Jose.</li>
+<li class="now"><b>Now</b> {% if fundraiser.active %}Preparing for our first event and our first cycle of kits.{% else %}Preparing our first cycle of kits.{% endif %}</li>
+{% if fundraiser.active %}<li class="next"><b>Nov 8, 2026</b> First fundraiser, at Chipotle in San Jose.</li>{% endif %}
 <li class="next"><b>Fall 2026</b> First cycle: kits for 100 mothers.</li>
 </ol>
 </div>
