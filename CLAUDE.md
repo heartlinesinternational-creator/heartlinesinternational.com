@@ -3,7 +3,7 @@
 Read this before every change. It is the only context you have about this organization.
 
 ## Who we are
-- Heartlines International (HINT): a California nonprofit public benefit corporation, EIN 42-4681667, incorporated Aug 19, 2026. Federal 501(c)(3) application (Form 1023-EZ) is pending with the IRS.
+- Heartlines International (HINT): a California nonprofit public benefit corporation, EIN 42-4681667, incorporated Aug 19, 2026. Recognized by the IRS as a 501(c)(3) public charity under section 170(b)(1)(A)(vi) (determination letter dated Oct 15, 2026, effective Aug 19, 2026).
 - Founded by two high school students in San Jose, CA: **Jason Ham** and **Allison Kim**, co-founders and co-presidents. Board: Jason Ham, Allison Kim, Joshua Kim. CFO: Hyungjun Ham.
 - Mission (use verbatim): "Heartlines International nurtures the health, hope, and future of underserved mothers and children around the world — meeting real community needs through health, education, and mental-health support, so that every mother and child knows they are seen and valued."
 - Program: each cycle, kits for about 100 mothers at a partner maternity clinic in the Philippines: iron (ferrous) tablets bought locally by clinic staff with HINT funds, two health guides (ferrous and mental health, in Tagalog and English, checked by the clinic's medical team), and a handwritten card from a student volunteer. Quarterly cycles are planned. The first cycle is in preparation (fall 2026).
@@ -11,7 +11,7 @@ Read this before every change. It is the only context you have about this organi
 
 ## Hard rules
 - Never delete or edit the `CNAME` file. It connects the custom domain.
-- Never write "tax-deductible" until the founders say the IRS determination letter has arrived. Use "501(c)(3) application pending."
+- Tax wording: "501(c)(3) public charity" and "tax-deductible to the extent allowed by law." Never promise a donor a specific tax result, and never give tax advice.
 - Do not name the partner clinic. Use "a partner maternity clinic in the Philippines" until the founders say the clinic agreed to be named.
 - Never add bank details, signatures, a home or mailing address, phone numbers, or anyone's personal information.
 - Health facts: use only the statistics already cited in the Sources list on about.html (WHO, World Bank/WHO GHO, Cochrane, Bulletin of the WHO). Any new statistic needs a WHO, government, or peer-reviewed source, added to that list with a numbered link. Never give medical advice.
