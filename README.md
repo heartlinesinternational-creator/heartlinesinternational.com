@@ -10,7 +10,7 @@ Static HTML and CSS built with [Eleventy](https://www.11ty.dev/), deployed to Gi
 - `CLAUDE.md` holds the editing rules.
 - `CNAME` (created by GitHub for the custom domain). Do not delete it.
 - Never put private information in this repository (bank details, signatures, home address).
-- Do not use the word "tax-deductible" until the IRS determination letter arrives.
+- Tax wording: "501(c)(3) public charity"; gifts are "tax-deductible to the extent allowed by law" (IRS letter dated Oct 15, 2026). Never promise a specific tax result.
 
 ## Before the merch shop launches (open, for the CFO)
 - **California seller's permit (CDTFA):** selling merch to California buyers generally requires one, even for nonprofits. Confirm whether Fourthwall is the seller of record and collects California sales tax on our orders; decide whether HINT still needs a permit (for example, for in-person sales at events). Plan: `.plans/merch-shop-and-platform-spec.md`.
