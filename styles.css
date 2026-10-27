@@ -1,8 +1,6 @@
 :root{
 --cream:#FAF2DC;--navy:#342D47;--pink:#F6C3C9;--dpink:#F199A4;--ink:#342D47;--muted:#5d5674;--white:#fff;--max:1080px;
 --line:rgba(52,45,71,.22);
---shadow-border:0 0 0 1px oklch(0 0 0 / .06),0 1px 2px -1px oklch(0 0 0 / .06),0 2px 4px 0 oklch(0 0 0 / .04);
---shadow-border-hover:0 0 0 1px oklch(0 0 0 / .08),0 1px 2px -1px oklch(0 0 0 / .08),0 2px 4px 0 oklch(0 0 0 / .06);
 --image-outline:oklch(0 0 0 / .1);
 --font-display:"Alegreya",Georgia,"Times New Roman",serif;
 --font-body:"Alegreya Sans","Gill Sans","Segoe UI",system-ui,sans-serif;
@@ -18,6 +16,8 @@ img{max-width:100%;height:auto;display:block}
 :focus-visible{outline:3px solid var(--navy);outline-offset:2px}
 .mission :focus-visible,footer :focus-visible{outline-color:var(--pink)}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+/* text for screen readers only, e.g. "(opens in a new tab)" */
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 
 /* header */
 header{background:var(--cream);border-bottom:2px solid var(--pink);position:sticky;top:0;z-index:10}
@@ -35,7 +35,6 @@ header{background:var(--cream);border-bottom:2px solid var(--pink);position:stic
 .btn.sm{padding:8px 16px;font-size:.92rem}
 .btn.primary{background:var(--navy);color:var(--cream)}
 .btn.ghost{background:transparent;color:var(--navy)}
-.btn.pink{background:var(--dpink);border-color:var(--dpink);color:var(--navy)}
 @media (prefers-reduced-motion:no-preference){.btn:active{scale:.96}}
 .textlink{display:inline-block;padding:10px 0;font-weight:700}
 .biglink{font-family:var(--font-display);font-weight:700;font-size:clamp(1.15rem,3vw,1.6rem);overflow-wrap:anywhere}
@@ -44,19 +43,18 @@ header{background:var(--cream);border-bottom:2px solid var(--pink);position:stic
 /* hover styling only where a real pointer can hover */
 @media (hover:hover){
 .nav a.link:not([aria-current]):hover{background:#fff}
-.btn.primary:hover,.btn.pink:hover{opacity:.88}
+.btn.primary:hover{opacity:.88}
 .btn.ghost:hover{background:#fff}
 .ref:hover{text-decoration:underline}
-.dl:hover{box-shadow:var(--shadow-border-hover)}
 }
 
 /* hero */
 .hero{padding:72px 0 56px}
-.hero h1{font-size:clamp(2rem,5vw,3.2rem);max-width:16ch;margin-bottom:18px}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);max-width:20ch;margin-bottom:18px}
 .hero p.lead{font-size:1.15rem;max-width:var(--measure);color:var(--muted);margin-bottom:18px}
 .meta{color:var(--muted);font-size:.95rem;margin-bottom:6px}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:56px;align-items:end}
-.kit-cost{border-left:1px solid var(--line);padding-left:40px;padding-bottom:6px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:56px;align-items:start}
+.kit-cost{border-left:1px solid var(--line);padding:8px 0 6px 40px}
 .kit-cost-n{font-family:var(--font-display);font-weight:800;font-size:clamp(3.5rem,8vw,5.5rem);line-height:.9;color:var(--navy)}
 .kit-cost-l{font-size:1.15rem;margin:8px 0 18px}
 .hero-split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:end}
@@ -77,10 +75,6 @@ p.sub.after-list{margin-top:24px;margin-bottom:0}
 .prose{max-width:var(--measure);margin-bottom:16px}
 .prose:last-child{margin-bottom:0}
 .small{font-size:.92rem}
-.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-.card{background:#fff;border:1px solid transparent;box-shadow:var(--shadow-border);border-radius:18px;padding:24px}
-main > section:nth-of-type(even) .card{background:var(--cream)}
-.card h3{font-size:1.45rem;margin-bottom:8px}
 .split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
 @media (max-width:820px){.split{grid-template-columns:1fr;gap:32px}}
 .date-line{font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:var(--navy);margin:-4px 0 10px}
@@ -118,12 +112,17 @@ main > section.ctaband{background:var(--dpink);padding:56px 0}
 .flyer{display:block;max-width:360px;justify-self:center;border-radius:14px;overflow:hidden;box-shadow:0 12px 28px rgba(52,45,71,.16)}
 .flyer img{width:100%;height:auto;border-radius:14px}
 @media (max-width:820px){.feature .split{grid-template-columns:1fr}.flyer{max-width:300px}}
-.downloads{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-top:26px}
-.dl{display:block;text-decoration:none;background:#fff;border:1px solid transparent;box-shadow:var(--shadow-border);border-radius:18px;padding:10px;font-weight:500;font-size:.9rem;text-align:center;transition:box-shadow .15s ease-out}
-.dl img{border-radius:7px;margin-bottom:8px;aspect-ratio:3/4;object-fit:cover;object-position:top;width:100%}
+/* a heading and its paragraph as ruled rows, not cards */
+.rules{max-width:52em;border-bottom:1px solid var(--line)}
+.rules > div{display:grid;grid-template-columns:14rem minmax(0,1fr);gap:24px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)}
+.rules h3{font-size:1.3rem}
+.rules p{max-width:var(--measure)}
+@media (max-width:640px){.rules > div{grid-template-columns:1fr;gap:6px}}
+.downloads{list-style:none;display:grid;gap:4px;margin-top:24px}
+.downloads a{display:inline-block;padding:8px 0}
 
 /* content images get a neutral 1px edge (not on the logo) */
-img.headshot,.flyer img,.dl img{outline:1px solid var(--image-outline);outline-offset:-1px}
+img.headshot,.flyer img{outline:1px solid var(--image-outline);outline-offset:-1px}
 
 /* about */
 .approach{border-top:3px solid var(--dpink);padding-top:20px}
@@ -132,7 +131,8 @@ img.headshot,.flyer img,.dl img{outline:1px solid var(--image-outline);outline-o
 .steps li{counter-increment:s;position:relative;padding:16px 0 16px 52px;border-top:1px solid var(--line)}
 .steps li::before{content:counter(s);position:absolute;left:0;top:12px;font-family:var(--font-display);font-weight:800;font-size:1.5rem;line-height:1.2;color:var(--navy)}
 .founders{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,300px));margin-bottom:40px}
-.team .card p.role{color:var(--muted);font-weight:500;font-size:.95rem;margin-bottom:4px}
+.founder .role{color:var(--muted);font-weight:500;font-size:.95rem;margin-bottom:2px}
+.founder h3{font-size:1.45rem}
 .headshot{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;margin-bottom:14px;background:#eee}
 .headshot.initials{display:grid;place-items:center;background:var(--pink);font-family:var(--font-display);font-weight:800;font-size:3.5rem;color:var(--navy)}
 .minor-h{font-size:1.45rem;margin-bottom:16px}
@@ -147,8 +147,8 @@ img.headshot,.flyer img,.dl img{outline:1px solid var(--image-outline);outline-o
 
 /* progress: three phase columns. Dots: solid = done, ringed = now, hollow = still ahead */
 .track{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);align-items:start}
-.phase-col{--bg:#fff;background:var(--bg);border:1px solid transparent;box-shadow:var(--shadow-border);border-radius:18px;padding:20px 20px 16px}
-.phase-col.current{--bg:var(--pink)}
+.phase-col{--bg:var(--cream);background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:20px 20px 16px}
+.phase-col.current{--bg:var(--pink);border-color:var(--pink)}
 .phase-h{font-size:1.45rem;margin-bottom:14px}
 .phase-col ol{list-style:none;display:grid;gap:12px;padding-left:18px}
 .phase-col li{position:relative;font-size:.94rem;line-height:1.5}
@@ -186,9 +186,6 @@ footer ul{list-style:none;display:grid;gap:0}
 footer .flogo{height:44px;width:auto;margin-bottom:12px;background:var(--cream);border-radius:10px;padding:4px 8px}
 footer .legal{border-top:1px solid rgba(250,242,220,.2);padding-top:16px;margin-top:10px;opacity:.85}
 
-/* 404 */
-.logo-404{height:56px;width:auto;margin-bottom:24px}
-
 /* phones: the header scrolls away instead of covering the screen, and every tap target is at least 44px */
 @media (max-width:640px){
 .hero{padding:44px 0 40px}
@@ -202,4 +199,4 @@ header{position:static}
 }
 
 /* Alegreya defaults to old-style figures; numbers that carry information read better lining */
-.kit-cost-n,.fact-n,.date-line,.phase-col li b,.steps li::before,.meta{font-variant-numeric:lining-nums}
+h1,h2,h3,.kit-cost-n,.fact-n,.date-line,.phase-col li b,.steps li::before,.meta{font-variant-numeric:lining-nums}

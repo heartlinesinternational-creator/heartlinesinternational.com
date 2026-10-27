@@ -6,6 +6,6 @@
 <li><a class="link" href="{{ item.href }}"{% if page.url == "/" + item.href or (page.url == "/" and item.href == "index.html") %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
 {% endfor -%}
 </ul></nav>
-<a class="btn primary sm" href="{{ site.donateUrl }}" target="_blank" rel="noopener">Donate</a>
+<a class="btn primary sm" href="{{ site.donateUrl }}" target="_blank" rel="noopener">Donate<span class="vh"> (opens in a new tab)</span></a>
 </div>
 </div></header>
