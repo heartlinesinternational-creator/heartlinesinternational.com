@@ -1,0 +1,8 @@
+node_modules/
+_site/
+.cache/
+.DS_Store
+.claude/settings.local.json
+# impeccable working files (shared config.json stays tracked)
+.impeccable/*
+!.impeccable/config.json

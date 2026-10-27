@@ -1,0 +1,11 @@
+<header><div class="wrap nav">
+<a class="brand" href="index.html"><img src="images/logo.png" alt="HINT logo" width="141" height="40"><span>Heartlines International</span></a>
+<div class="nav-right">
+<nav aria-label="Main"><ul>
+{% for item in site.nav -%}
+<li><a class="link" href="{{ item.href }}"{% if page.url == "/" + item.href or (page.url == "/" and item.href == "index.html") %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+{% endfor -%}
+</ul></nav>
+<a class="btn primary sm" href="{{ site.donateUrl }}" target="_blank" rel="noopener">Donate<span class="vh"> (opens in a new tab)</span></a>
+</div>
+</div></header>
