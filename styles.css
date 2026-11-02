@@ -130,7 +130,8 @@ img.headshot,.flyer img{outline:1px solid var(--image-outline);outline-offset:-1
 .steps{counter-reset:s;list-style:none;max-width:44em;border-bottom:1px solid var(--line)}
 .steps li{counter-increment:s;position:relative;padding:16px 0 16px 52px;border-top:1px solid var(--line)}
 .steps li::before{content:counter(s);position:absolute;left:0;top:12px;font-family:var(--font-display);font-weight:800;font-size:1.5rem;line-height:1.2;color:var(--navy)}
-.founders{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,300px));margin-bottom:40px}
+.founders{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(150px,220px));margin-bottom:40px}
+@media (max-width:600px){.founders{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.founder h3{font-size:1.2rem}.founder .role{font-size:.85rem}}
 .founder .role{color:var(--muted);font-weight:500;font-size:.95rem;margin-bottom:2px}
 .founder h3{font-size:1.45rem}
 .headshot{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;margin-bottom:14px;background:#eee}
