@@ -134,12 +134,15 @@ img.headshot,.flyer img{outline:1px solid var(--image-outline);outline-offset:-1
 @media (max-width:600px){.founders{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.founder h3{font-size:1.2rem}.founder .role{font-size:.85rem}}
 .founder .role{color:var(--muted);font-weight:500;font-size:.95rem;margin-bottom:2px}
 .founder h3{font-size:1.45rem}
+.founder .avatar{margin-bottom:14px}
 .headshot{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;margin-bottom:14px;background:#eee}
 .headshot.initials{display:grid;place-items:center;background:var(--pink);font-family:var(--font-display);font-weight:800;font-size:3.5rem;color:var(--navy)}
 .minor-h{font-size:1.45rem;margin-bottom:16px}
-.people{display:flex;flex-wrap:wrap;gap:20px 40px}
-.person{display:flex;align-items:center;gap:14px}
-.avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none}
+/* board: blank placeholders at the size the founder photos used (220px wide), until real photos arrive */
+.people{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(150px,220px))}
+@media (max-width:600px){.people{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
+.person{display:flex;flex-direction:column;gap:12px}
+.avatar{width:100%;max-width:220px;height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover}
 .pname{font-weight:700;line-height:1.2}
 .prole{font-size:.9rem;color:var(--muted)}
 .sources .facts{margin-bottom:32px}
