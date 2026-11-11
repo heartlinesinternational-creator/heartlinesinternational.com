@@ -151,7 +151,7 @@ img.headshot,.flyer img{outline:1px solid var(--image-outline);outline-offset:-1
 .citations a{overflow-wrap:anywhere}
 
 /* progress: three phase columns. Dots: solid = done, ringed = now, hollow = still ahead */
-.track{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);align-items:start}
+.track{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);align-items:stretch}
 .phase-col{--bg:var(--cream);background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:20px 20px 16px}
 .phase-col.current{--bg:var(--pink);border-color:var(--pink)}
 .phase-h{font-size:1.45rem;margin-bottom:14px}
