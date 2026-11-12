@@ -14,7 +14,7 @@
 <meta property="og:title" content="{{ site.name }}">
 <meta property="og:description" content="{{ description or site.description }}">
 <meta property="og:image" content="{{ site.url }}/images/logo.png">
-<meta property="og:url" content="{{ site.url }}/">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <link rel="stylesheet" href="styles.css">
 {% include "jsonld.njk" -%}
 </head>

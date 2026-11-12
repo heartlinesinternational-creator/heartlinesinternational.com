@@ -5,10 +5,9 @@ name: Deploy site
 on:
   push:
     branches: [main]
-  # Daily rebuild so date-based content updates on its own
-  # (e.g. the Chipotle fundraiser disappears on Nov 9). 08:15 UTC = 12:15 AM PST.
-  schedule:
-    - cron: "15 8 * * *"
+  # The daily scheduled rebuild was removed Nov 11, 2026: nothing on the site
+  # depends on the date anymore (the Chipotle blocks were deleted Nov 10).
+  # Add a schedule back only if date-based content returns.
   workflow_dispatch:
 
 permissions:
