@@ -133,12 +133,13 @@ img.headshot,.flyer img{outline:1px solid var(--image-outline);outline-offset:-1
 .founders{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(150px,220px));margin-bottom:40px}
 @media (max-width:600px){.founders{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.founder h3{font-size:1.2rem}.founder .role{font-size:.85rem}}
 .founder .role{color:var(--muted);font-weight:500;font-size:.95rem;margin-bottom:2px}
+.nw{white-space:nowrap}
 .founder h3{font-size:1.45rem}
 .founder .avatar{margin-bottom:14px}
 .headshot{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;margin-bottom:14px;background:#eee}
 .headshot.initials{display:grid;place-items:center;background:var(--pink);font-family:var(--font-display);font-weight:800;font-size:3.5rem;color:var(--navy)}
 .minor-h{font-size:1.45rem;margin-bottom:16px}
-/* founders: blank placeholder at the size the founder photos used (220px), until matching photos arrive */
+/* round placeholder avatars (board row; founders use .headshot photos since Nov 11, 2026) */
 .avatar{width:100%;max-width:220px;height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover}
 /* board and officers: supporting roles, so a compact row with small photos */
 .people{display:flex;flex-wrap:wrap;gap:16px 40px}
