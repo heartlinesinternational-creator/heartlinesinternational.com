@@ -188,6 +188,9 @@ img.headshot,.flyer img{outline:1px solid var(--image-outline);outline-offset:-1
 .field input,.field select,.field textarea{font:inherit;font-weight:400;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:11px 14px;width:100%}
 .field textarea{resize:vertical;min-height:9rem;line-height:1.5}
 .field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:3px solid var(--dpink);outline-offset:1px;border-color:var(--navy)}
+.field .hint{font-size:.9rem;font-weight:400;color:var(--muted)}
+.field input:user-invalid,.field textarea:user-invalid{border-color:var(--dpink);border-width:2px;background:#fff7f8}
+.field input:user-invalid + .hint{color:var(--navy);font-weight:500}
 button.btn{font:inherit;font-weight:700;cursor:pointer}
 .form-end{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px}
 .form-end .small{color:var(--muted)}
@@ -200,7 +203,7 @@ button.btn{font:inherit;font-weight:700;cursor:pointer}
 .way-label{font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 .way-value{display:inline-block;font-family:var(--font-display);font-weight:700;font-size:1.2rem;line-height:1.35;color:var(--navy);overflow-wrap:anywhere}
 a.way-value{text-decoration:underline;text-underline-offset:3px}
-footer .fmail{display:inline-block;padding:5px 0;overflow-wrap:break-word}
+footer .fmail{display:inline-block;padding:5px 0;overflow-wrap:break-word;color:var(--pink);-webkit-user-select:all;user-select:all;cursor:text}
 
 /* footer */
 footer{background:var(--navy);color:var(--cream);padding:40px 0;font-size:.95rem}
