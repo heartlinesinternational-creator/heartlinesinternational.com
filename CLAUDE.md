@@ -20,6 +20,8 @@ Read this before every change. It is the only context you have about this organi
 - Donations: links to an outside donation page only. Never build a payment form, cart or checkout, and never collect card details, addresses or phone numbers on our site.
 - Strip EXIF/GPS data from every photo before committing it (location data could reveal the clinic).
 - Never mention the Eagle Scout project on this site.
+- Contact (Nov 22, 2026, Jason's request): the Get Involved page has a contact form that posts to FormSubmit (`site.formAction` in `src/_data/site.js`) with no JavaScript. Fields: name, email, topic, message only; a hidden `_honey` field catches bots; `_next` returns to `get-involved.html#sent`, where CSS `:target` shows the thank-you note. FormSubmit holds messages until the founders click its one-time activation email in the HINT inbox. No `mailto:` links anywhere (they open whatever mail app a visitor's computer has, often Outlook): every "email us" points to `#contact`, and the address is shown as plain text, at the same size as the Instagram handle. If spam arrives, set `_captcha` to "true". If FormSubmit ever stops working, Web3Forms is the fallback (needs an access key from the founders).
+- About page order: Our story, then "Why iron matters" (the facts sit next to the story they support), then progress, how a cycle works, founders, accountability, the Donate band, and Sources last (the numbered list only; the footer links to about.html#sources and the Home page links to #src2, #src4 and #src5, so keep those ids).
 - Keep `robots.txt`, `sitemap.xml` and the JSON-LD block in each page's head (it lives in `src/_includes/jsonld.njk`; they help Google show the organization and its founders). Add any new page to `sitemap.xml`.
 
 ## Style

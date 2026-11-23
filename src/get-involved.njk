@@ -17,8 +17,8 @@ title: Get Involved · Heartlines International
 <div class="give">
 <div class="give-main"><h3>Give online</h3><p>A secure donation page. You can give once or monthly, and 100% of your gift reaches Heartlines International.</p><a class="btn primary" href="{{ site.donateUrl }}" target="_blank" rel="noopener">Donate online<span class="vh"> (opens in a new tab)</span></a><p class="small">Heartlines International is a 501(c)(3) public charity (EIN 42-4681667). Gifts are tax-deductible to the extent allowed by law.</p></div>
 <div class="give-other">
-<p><strong>Give by check.</strong> Make checks payable to &ldquo;Heartlines International.&rdquo; <a href="mailto:{{ site.email }}?subject=Giving%20by%20check">Email us</a> for the mailing address.</p>
-<p><strong>Ask about a match.</strong> Many employers match gifts to 501(c)(3) charities like ours. Ask your employer, or email us and we&rsquo;ll help. <a href="mailto:{{ site.email }}?subject=Employer%20matching">Ask us</a></p>
+<p><strong>Give by check.</strong> Make checks payable to &ldquo;Heartlines International.&rdquo; <a href="#contact">Send us a message</a> for the mailing address.</p>
+<p><strong>Ask about a match.</strong> Many employers match gifts to 501(c)(3) charities like ours. Ask your employer, or <a href="#contact">send us a message</a> and we&rsquo;ll help.</p>
 </div>
 </div>
 </div></section>
@@ -26,7 +26,7 @@ title: Get Involved · Heartlines International
 <section id="volunteer"><div class="wrap">
 <h2>Volunteer</h2>
 <p class="sub">Write cards, help pack kits, or help with outreach. No experience needed: we train every volunteer, including on writing with cultural sensitivity.</p>
-<div class="actions"><a class="btn ghost" href="mailto:{{ site.email }}?subject=Volunteering%20with%20Heartlines">Email us to volunteer</a></div>
+<div class="actions"><a class="btn ghost" href="#contact">Message us to volunteer</a></div>
 </div></section>
 
 <section id="share"><div class="wrap">
@@ -35,15 +35,33 @@ title: Get Involved · Heartlines International
 <div class="cols3">
 <div><h3>Share our story</h3><p>Send our About page to a friend or post it to your story.</p><a class="btn ghost" href="about.html">Read our story</a></div>
 <div><h3>Follow and share</h3><p>Follow us on Instagram and share a post that means something to you.</p><a class="btn ghost" href="{{ site.instagramUrl }}" target="_blank" rel="noopener">Instagram<span class="vh"> (opens in a new tab)</span></a></div>
-<div><h3>Bring a group</h3><p>Ask your club, team, or youth group to write cards with us.</p><a class="btn ghost" href="mailto:{{ site.email }}?subject=Group%20volunteering">Email us</a></div>
+<div><h3>Bring a group</h3><p>Ask your club, team, or youth group to write cards with us.</p><a class="btn ghost" href="#contact">Message us</a></div>
 </div>
 </div></section>
 
 <section id="contact"><div class="wrap">
 <h2>Contact us</h2>
 <p class="sub">Questions, partnerships, or volunteering: we'd love to hear from you.</p>
-<div class="contactline">
-<a class="biglink" href="mailto:{{ site.email }}">{{ site.email }}</a>
-<a class="textlink" href="{{ site.instagramUrl }}" target="_blank" rel="noopener">Instagram @heartlinesinternational<span class="vh"> (opens in a new tab)</span></a>
+<p class="sent-note" id="sent" role="status">Thank you! Your message is on its way. We&rsquo;ll reply by email soon.</p>
+<div class="contact-grid">
+<form class="contact-form" action="{{ site.formAction }}" method="POST">
+<input type="hidden" name="_subject" value="New message from the Heartlines International website">
+<input type="hidden" name="_next" value="{{ site.url }}/get-involved.html#sent">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<p class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>
+<div class="field-row">
+<label class="field">Your name<input type="text" name="name" autocomplete="name" maxlength="100" required></label>
+<label class="field">Your email<input type="email" name="email" autocomplete="email" maxlength="200" required></label>
+</div>
+<label class="field">What is it about?<select name="topic"><option>Volunteering</option><option>Giving or a check</option><option>Partnerships</option><option>Something else</option></select></label>
+<label class="field">Message<textarea name="message" rows="6" maxlength="3000" required></textarea></label>
+<div class="form-end"><button class="btn primary" type="submit">Send message</button><p class="small">We use what you send only to reply to you.</p></div>
+</form>
+<div class="contact-ways">
+<p class="way-h">Or reach us directly</p>
+<div class="way"><p class="way-label">Email</p>{% set em = site.email.split("@") %}<p class="way-value">{{ em[0] }}@<wbr>{{ em[1] }}</p></div>
+<div class="way"><p class="way-label">Instagram</p><a class="way-value" href="{{ site.instagramUrl }}" target="_blank" rel="noopener">@heartlinesinternational<span class="vh"> (opens in a new tab)</span></a></div>
+</div>
 </div>
 </div></section>
