@@ -2,6 +2,7 @@
 layout: base.njk
 permalink: get-involved.html
 title: Get Involved · Heartlines International
+description: "Donate online or by check, volunteer to write cards and pack kits, spread the word, or send us a message. About $5 covers one mother’s kit."
 ---
 <section class="hero"><div class="wrap hero-split">
 <h1>Help us reach the first 100 mothers.</h1>
@@ -13,7 +14,7 @@ title: Get Involved · Heartlines International
 
 <section class="ways" id="donate"><div class="wrap">
 <h2>Ways to give</h2>
-<p class="sub">About $5 covers one mother's kit: iron tablets for her pregnancy, two health guides in her language, and a handwritten card.</p>
+<p class="sub">About $5 covers one mother&rsquo;s kit: iron tablets for her pregnancy, two health guides in her language, and a handwritten card.</p>
 <div class="give">
 <div class="give-main"><h3>Give online</h3><p>A secure donation page. You can give once or monthly, and 100% of your gift reaches Heartlines International.</p><a class="btn primary" href="{{ site.donateUrl }}" target="_blank" rel="noopener">Donate online<span class="vh"> (opens in a new tab)</span></a><p class="small">Heartlines International is a 501(c)(3) public charity (EIN 42-4681667). Gifts are tax-deductible to the extent allowed by law.</p></div>
 <div class="give-other">
@@ -41,7 +42,7 @@ title: Get Involved · Heartlines International
 
 <section id="contact"><div class="wrap">
 <h2>Contact us</h2>
-<p class="sub">Questions, partnerships, or volunteering: we'd love to hear from you.</p>
+<p class="sub">Questions, partnerships, or volunteering: we&rsquo;d love to hear from you.</p>
 <p class="sent-note" id="sent" role="status">Thank you! Your message is on its way. We&rsquo;ll reply by email soon.</p>
 <div class="contact-grid">
 <form class="contact-form" action="{{ site.formAction }}" method="POST">
@@ -51,11 +52,11 @@ title: Get Involved · Heartlines International
 <input type="hidden" name="_template" value="table">
 <p class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>
 <div class="field-row">
-<label class="field">Your name<input type="text" name="name" autocomplete="name" maxlength="100" required></label>
-<label class="field">Your email<input type="email" name="email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" maxlength="200" placeholder="name@example.com" pattern="[^@\s]+@[^@\s]+\.[A-Za-z]{2,}" title="A full email address, like name@example.com" aria-describedby="email-hint" required><span class="hint" id="email-hint">We reply here, so please double-check it.</span></label>
+<div class="field"><label for="f-name">Your name</label><input id="f-name" type="text" name="name" autocomplete="name" maxlength="100" required></div>
+<div class="field"><label for="f-email">Your email</label><input id="f-email" type="email" name="email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" maxlength="200" placeholder="name@example.com" pattern="[^@\s]+@[^@\s]+\.[A-Za-z]{2,}" title="A full email address, like name@example.com" aria-describedby="email-hint" required><p class="hint" id="email-hint">We reply here, so please double-check it.</p></div>
 </div>
-<label class="field">What is it about?<select name="topic"><option>Volunteering</option><option>Giving or a check</option><option>Partnerships</option><option>Something else</option></select></label>
-<label class="field">Message<textarea name="message" rows="6" maxlength="3000" required></textarea></label>
+<div class="field"><label for="f-topic">What is it about?</label><select id="f-topic" name="topic"><option>Volunteering</option><option>Giving or a check</option><option>Partnerships</option><option>Something else</option></select></div>
+<div class="field"><label for="f-message">Message</label><textarea id="f-message" name="message" rows="6" maxlength="3000" required></textarea></div>
 <div class="form-end"><button class="btn primary" type="submit">Send message</button><p class="small">We use what you send only to reply to you.</p></div>
 </form>
 <div class="contact-ways">
