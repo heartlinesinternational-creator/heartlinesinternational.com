@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96.png">
 <link rel="apple-touch-icon" href="images/icon-180.png">
-{% if page.url != "/404.html" %}<link rel="canonical" href="{{ site.url }}{{ page.url }}">{% endif %}
+{% if page.url != "/404.html" %}<link rel="canonical" href="{{ site.url }}{{ page.url }}">{% else %}<meta name="robots" content="noindex">{% endif %}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ site.name }}">
 <meta property="og:title" content="{{ title }}">

@@ -5,6 +5,8 @@ export default {
   email: "heartlinesinternational@gmail.com",
   donateUrl: "https://www.zeffy.com/en-US/donation-form/support-heartlines-international",
   instagramUrl: "https://www.instagram.com/heartlinesinternational/",
+  // Volunteer interest form (Google Form, Nov 26, 2026, Jason). Every "Sign up to volunteer" button points here.
+  volunteerFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSexo5ZuAL-1RqYCNk976ghxsE7Qs1S9nini45392GaBMNUWIw/viewform",
   // Contact form: FormSubmit emails each message to the address below (no account, no JavaScript).
   // After the first test message, FormSubmit sends an activation email to this inbox; click it once.
   formAction: "https://formsubmit.co/heartlinesinternational@gmail.com",
